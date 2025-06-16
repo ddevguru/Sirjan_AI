@@ -1,100 +1,80 @@
-# Sirjan AI Website
+🌟 Sirjan AI Website
+🚀 Overview
+Sirjan AI, crafted by Team Srijak, is a powerful no-code platform that empowers users to create stunning websites and applications without writing a single line of code. With intuitive templates, AI-driven prompts, and voice command support, Sirjan AI simplifies web development for everyone. The frontend is built with React.js and Node.js, styled using Tailwind CSS, while the backend leverages PHP and MySQL for robust functionality. This README provides a comprehensive guide to setting up, running, and understanding the project, along with team details.
 
-## Overview
-Sirjan AI is a no-code platform developed by **Team Srijak** that enables users to create websites and applications without coding. It leverages templates, AI prompts, and voice commands for seamless website and application development. The frontend is built using **React.js** and **Node.js**, styled with **Tailwind CSS**, while the backend uses **PHP** with a **MySQL** database. This README provides a detailed guide to setting up and running the project, explaining the code structure, database schema, and team details.
+📑 Table of Contents
 
-## Table of Contents
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Setup Instructions](#setup-instructions)
-  - [Backend Setup (PHP & MySQL)](#backend-setup-php--mysql)
-  - [Frontend Setup (React.js & Node.js)](#frontend-setup-reactjs--nodejs)
-  - [Running the Application](#running-the-application)
-- [Database Schema](#database-schema)
-- [Code Explanation](#code-explanation)
-  - [Frontend Code](#frontend-code)
-  - [Backend Code](#backend-code)
-- [Team Members](#team-members)
-- [License](#license)
-
-## Features
-- **No-Code Development**: Create websites and applications using pre-designed templates or AI-generated prompts.
-- **Voice Command Integration**: Build and customize websites using voice inputs.
-- **Template Library**: Choose from templates for business, portfolio, restaurant, and e-commerce websites.
-- **AI-Powered Customization**: Generate dynamic layouts and content using AI prompts.
-- **Responsive Design**: Websites are optimized for both desktop and mobile devices.
-- **User Management**: Register, log in, and manage user accounts.
-- **Contact Form**: Collect user inquiries with backend integration.
-- **Dynamic Website Generation**: Generate and store HTML files for published websites.
-
-## Tech Stack
-- **Frontend**: React.js, Node.js, Tailwind CSS
-- **Backend**: PHP (v8.2)
-- **Database**: MySQL (MariaDB 10.4)
-- **Tools**: XAMPP (local development), npm, Composer
-
-## Project Structure
-
-SirjanAI/ ├── frontend/ # React.js frontend code │ ├── public/ # Public assets and index.html │ ├── src/ # React components, styles, and logic │ │ ├── components/ # Reusable components (Hero, Gallery, Footer, etc.) │ │ ├── pages/ # Page components (Home, Templates, Editor) │ │ ├── assets/ # Images, fonts, and static files │ │ ├── App.js # Main App component │ │ ├── index.js # React entry point │ │ └── styles/ # Tailwind CSS and custom styles │ ├── package.json # Node.js dependencies and scripts │ └── README.md # Frontend-specific README ├── backend/ # PHP backend code │ ├── api/ # API endpoints for CRUD operations │ │ ├── templates.php # Template management │ │ ├── users.php # User authentication and management │ │ ├── websites.php # Website creation and publishing │ │ └── contact.php # Contact form submissions │ ├── config/ # Configuration files │ │ └── database.php # Database connection settings │ ├── models/ # Database models │ ├── sites/ # Generated website HTML files │ ├── composer.json # PHP dependencies │ └── index.php # Backend entry point ├── database/ # Database scripts │ └── nocode_builder.sql # MySQL schema and sample data └── README.md # This file
+Features
+Tech Stack
+Prerequisites
+Setup Instructions
+Backend Setup (PHP & MySQL)
+Frontend Setup (React.js & Node.js)
+Running the Application
 
 
-## Prerequisites
-- **Node.js** (v16 or higher) and **npm**
-- **PHP** (v8.2 or higher)
-- **Composer** (for PHP dependencies)
-- **MySQL** (v10.4 or higher, MariaDB compatible)
-- **XAMPP** (or equivalent for Apache and MySQL)
-- **Git** (for cloning the repository)
-
-## Setup Instructions
-
-### Backend Setup (PHP & MySQL)
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/TeamSrijak/SirjanAI.git
-   cd SirjanAI
+Database Schema
+Code Explanation
+Frontend Code
+Backend Code
 
 
+Team Members
+License
 
+
+✨ Features
+
+No-Code Development: Build websites and applications using pre-designed templates or AI-generated prompts.
+Voice Command Integration: Create and customize websites effortlessly with voice inputs.
+Template Library: Choose from a variety of templates for business, portfolio, restaurant, and e-commerce websites.
+AI-Powered Customization: Generate dynamic layouts and content using AI prompts.
+Responsive Design: Ensure websites look great on both desktop and mobile devices.
+User Management: Register, log in, and manage user accounts seamlessly.
+Contact Form: Collect user inquiries with backend integration.
+Dynamic Website Generation: Generate and store HTML files for published websites.
+
+
+🛠 Tech Stack
+
+Frontend: React.js, Node.js, Tailwind CSS
+Backend: PHP (v8.2)
+Database: MySQL (MariaDB 10.4)
+Tools: XAMPP (local development), npm, Composer
+
+
+📋 Prerequisites
+To set up and run Sirjan AI, ensure you have the following installed:
+
+Node.js (v16 or higher) and npm
+PHP (v8.2 or higher)
+Composer (for PHP dependency management)
+MySQL (v10.4 or higher, MariaDB compatible)
+XAMPP (or equivalent for Apache and MySQL)
+Git (for cloning the repository)
+
+
+⚙️ Setup Instructions
+Backend Setup (PHP & MySQL)
+
+Clone the Repository:
+git clone https://github.com/TeamSrijak/SirjanAI.git
+cd SirjanAI
 
 
 Set Up MySQL Database:
 
-
-
-
-
-Start XAMPP and ensure Apache and MySQL are running.
-
-
-
+Start XAMPP and ensure Apache and MySQL services are running.
 Open phpMyAdmin (http://localhost/phpmyadmin).
-
-
-
 Create a database named nocode_builder.
-
-
-
-Import the SQL dump:
-
-mysql -u root -p nocode_builder < database/nocode_builder.sql
+Import the SQL dump:mysql -u root -p nocode_builder < database/nocode_builder.sql
 
 Alternatively, copy the SQL commands from database/nocode_builder.sql (provided in the user input) into phpMyAdmin.
 
 
-
 Configure Database Connection:
 
-
-
-
-
-Navigate to backend/config/database.php and update credentials:
-
-<?php
+Navigate to backend/config/database.php and update the credentials:<?php
 $host = '127.0.0.1';
 $db   = 'nocode_builder';
 $user = 'root';
@@ -117,131 +97,72 @@ try {
 
 
 
+
 Install PHP Dependencies:
 
-
-
-
-
-In the backend folder:
-
-cd backend
+In the backend folder:cd backend
 composer install
 
 
 
-Set Up Apache:
 
 
-
-
+5..soundSet Up Apache:
 
 Move the backend folder to XAMPP’s htdocs (e.g., C:/Xampp8.2/htdocs/SirjanAI/backend).
-
-
-
-Ensure the sites folder (backend/sites) has write permissions.
+Ensure the sites folder (backend/sites) has write permissions (chmod 777 on Linux or equivalent on Windows).
 
 Frontend Setup (React.js & Node.js)
 
-
-
-
-
 Navigate to Frontend Directory:
-
 cd frontend
 
 
-
 Install Dependencies:
-
 npm install
-
 
 
 Configure API Endpoints:
 
+Create or update frontend/src/config.js:export const API_BASE_URL = 'http://localhost/SirjanAI/backend/api';
 
-
-
-
-Create or update frontend/src/config.js:
-
-export const API_BASE_URL = 'http://localhost/SirjanAI/backend/api';
 
 
 
 Run the Frontend:
-
 npm start
 
 
+The React app will be available at http://localhost:3000.
 
 
-
-The app will be available at http://localhost:3000.
 
 Running the Application
 
-
-
-
-
 Start XAMPP:
-
-
-
-
-
-Ensure Apache and MySQL are running.
-
+Ensure Apache and MySQL services are running.
 
 
 Access the Backend:
-
-
-
-
-
-API endpoints are at http://localhost/SirjanAI/backend/api.
-
-
-
-Test with http://localhost/SirjanAI/backend/api/templates.php.
-
+API endpoints are available at http://localhost/SirjanAI/backend/api.
+Test with http://localhost/SirjanAI/backend/api/templates.php to verify connectivity.
 
 
 Access the Frontend:
-
-
-
-
-
-Open http://localhost:3000 to use the platform.
-
+Open http://localhost:3000 in your browser to interact with the Sirjan AI platform.
 
 
 Test Website Generation:
-
-
-
-
-
-Log in with sample credentials (e.g., deepak/password).
-
-
-
+Log in using sample credentials (e.g., username: deepak, password: password).
 Create a website using a template or AI prompt and verify the generated HTML in backend/sites.
 
-Database Schema
 
-The nocode_builder database includes four tables:
 
+
+🗄 Database Schema
+The nocode_builder database consists of four tables to support user management, templates, websites, and contact form submissions.
 1. users
-
-Stores user account details.
-
+Stores user account details for authentication and website ownership.
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `full_name` varchar(255) NOT NULL,
@@ -256,9 +177,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 2. templates
-
-Stores website templates with JSON data for components.
-
+Stores website templates with JSON data for components like hero, gallery, and footer.
 CREATE TABLE `templates` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -274,9 +193,7 @@ CREATE TABLE `templates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 3. websites
-
-Stores user-created websites with their configurations.
-
+Stores user-created websites with their configurations and generated HTML file paths.
 CREATE TABLE `websites` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -298,9 +215,7 @@ CREATE TABLE `websites` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 4. contact_messages
-
-Stores messages submitted via contact forms.
-
+Stores messages submitted via contact forms on generated websites.
 CREATE TABLE `contact_messages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `website_id` int(11) DEFAULT NULL,
@@ -317,29 +232,15 @@ CREATE TABLE `contact_messages` (
   CONSTRAINT `contact_messages_ibfk_1` FOREIGN KEY (`website_id`) REFERENCES `websites` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-Sample data is included in the provided SQL dump for testing.
+Sample data for these tables is included in the provided SQL dump for testing purposes.
 
-Code Explanation
-
+💻 Code Explanation
 Frontend Code
+The frontend is a React.js single-page application, styled with Tailwind CSS and utilizing CDN-hosted React libraries for simplicity.
 
-The frontend is a React.js single-page application styled with Tailwind CSS, using CDN-hosted React libraries.
+index.html (frontend/public):
 
-
-
-
-
-index.html (in frontend/public):
-
-
-
-
-
-Loads React, ReactDOM, and Tailwind CSS via CDN.
-
-
-
-Serves as the entry point for the React app.
+Serves as the entry point, loading React, ReactDOM, and Tailwind CSS via CDN.
 
 <!DOCTYPE html>
 <html lang="en">
@@ -358,18 +259,9 @@ Serves as the entry point for the React app.
 </html>
 
 
+App.js (frontend/src):
 
-App.js (in frontend/src):
-
-
-
-
-
-Defines the main app structure with routing and components.
-
-
-
-Example structure:
+Defines the app structure with client-side routing using react-router-dom.
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -390,26 +282,16 @@ function App() {
 export default App;
 
 
+Components (frontend/src/components):
 
-Components:
-
-
-
-
-
-Reusable components like Hero, Gallery, Contact, and Footer render dynamic content based on template or AI-generated JSON data.
-
-
-
-Example Hero component:
-
-function Hero({ config, styles }) {
+Reusable components (Hero, Gallery, Contact, Footer) render dynamic content based on JSON data from templates or AI prompts.
+Example Hero component:function Hero({ config, styles }) {
   return (
     <div className="hero" style={styles}>
-      <h1 className="text-4xl font-bold">{config.title}</h1>
-      <p className="text-xl">{config.subtitle}</p>
+      <h1 className="text-4xl font-bold text-gray-800">{config.title}</h1>
+      <p className="text-xl text-gray-600">{config.subtitle}</p>
       {config.buttonText && (
-        <button className="bg-blue-500 text-white px-4 py-2 rounded">
+        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
           {config.buttonText}
         </button>
       )}
@@ -419,52 +301,30 @@ function Hero({ config, styles }) {
 
 
 
+
 API Integration:
 
-
-
-
-
-Uses fetch to interact with backend APIs (e.g., /api/templates.php for template data).
-
-
-
-Example API call:
-
-async function fetchTemplates() {
+Uses the fetch API to communicate with backend endpoints (e.g., /api/templates.php).
+Example:async function fetchTemplates() {
   const response = await fetch(`${API_BASE_URL}/templates.php`);
   return await response.json();
 }
 
+
+
+
+
 Backend Code
+The backend is built with PHP, handling API requests and database interactions using PDO for secure MySQL queries.
 
-The backend is built with PHP, handling API requests and database operations.
+database.php (backend/config):
 
-
-
-
-
-database.php (in backend/config):
+Establishes a PDO connection to the MySQL database (configured in setup).
 
 
+templates.php (backend/api):
 
-
-
-Establishes a PDO connection to MySQL (as shown in setup).
-
-
-
-templates.php (in backend/api):
-
-
-
-
-
-Handles GET requests to fetch templates and POST requests to create new ones.
-
-
-
-Example:
+Manages template retrieval and creation.
 
 <?php
 require_once '../config/database.php';
@@ -477,18 +337,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 ?>
 
 
+users.php (backend/api):
 
-users.php (in backend/api):
-
-
-
-
-
-Manages user registration, login, and authentication using hashed passwords.
-
-
-
-Example login logic:
+Handles user registration, login, and authentication with hashed passwords.
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $data = json_decode(file_get_contents('php://input'), true);
@@ -505,18 +356,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 
+websites.php (backend/api):
 
-websites.php (in backend/api):
-
-
-
-
-
-Generates and saves HTML files to backend/sites based on user input and template data.
-
-
-
-Example:
+Generates HTML files from user input and template data, storing them in backend/sites.
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $data = json_decode(file_get_contents('php://input'), true);
@@ -532,18 +374,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 
-
-contact.php (in backend/api):
-
-
-
-
+contact.php (backend/api):
 
 Saves contact form submissions to the contact_messages table.
-
-
-
-Example:
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $data = json_decode(file_get_contents('php://input'), true);
@@ -560,32 +393,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   echo json_encode(['status' => 'success']);
 }
 
-Team Members
 
 
 
+👥 Team Members
+
+Deepak Mishra - LinkedIn: [Deepak Mishra](https://www.linkedin.com/in/ddevguru)
+Vrushali Nanavati - LinkedIn - [Vrushali Nanavati](https://www.linkedin.com/in/vrushali-nanavati-3ba606208)
+Sargam Sharma - LinkedIn - [Sargam Sharma](http://www.linkedin.com/in/sargam-sharma-9664b1301)
 
 
-Deepak Mishra - Lead Developer
-LinkedIn: Deepak Mishra
+Note: LinkedIn URLs are placeholders; replace with actual profiles as needed.
 
-
-
-Vrushali Nanavati - UI/UX Designer
-LinkedIn: Vrushali Nanavati
-
-
-
-Sargam Sharma - Backend Developer
-LinkedIn: Sargam Sharma
-
-
-
-Utkarsh Sharma - AI Integration Specialist
-LinkedIn: Utkarsh Sharma
-
-Note: LinkedIn URLs are placeholders; update with actual profiles as needed.
-
-License
-
+📜 License
 This project is licensed under the MIT License. See the LICENSE file for details.
